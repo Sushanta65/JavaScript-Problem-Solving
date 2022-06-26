@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript</title>
+  </head>
+  <body>
+    <div id="root"></div>
+   <p> I've solved some problem with Javascript. Here's the problem and solved codes. If you want to see the result please go to inspect element and then click console. </p>
+
+   <p style="padding-left: 30px">
+     <code>
+      // Problem Solving <br>
+      //Problem 1. লুডু খেলায় আমরা কিভাবে ১ থেকে ৬ রেন্ডম্লি প্রিন্ট করতে পারি?<br>
+      <br>
+      function randomNumber(min ,max) {<br>
+        return Math.floor(Math.random() * (max - min + 1) + min)<br>
+      }<br>
+      console.log(randomNumber(1, 6))<br>
+      //Solved<br>
+      <br>
+      //Problem 2. কিভাবে আমরা আমাদের শ্রেনী কক্ষের সবার নাম Alphabeticaly সাজাতে পারি?<br>
+      <br>
+      const studentsName = ["Akash", "Manik", "Sakib", "Bobita", "Atikur", "Ritu", "Hasan", <br>"Kawser"];<br>
+      studentsName.sort();<br>
+      console.log(studentsName)<br>
+      //Solved<br>
+      <br><br>
+      //Problem 3. কিভাবে আমরা আমাদের শ্রেনী কক্ষের সকলের রোল নম্বর ক্রমে সাজাতে পারি?<br>
+      <br>
+      const studentsRoll = [23, 1, 5, 20, 15, 25, 24, 11, 13, 12, 16, 17, 19, 18, 2, 4, 3, <br>8, 10, 9, 7, 6,22, 21]<br>
+      studentsRoll.sort((x, y) => {<br>
+        return x -y;<br>
+      })<br>
+      console.log(studentsRoll)<br>
+      //Solved<br>
+      <br>
+      // Problem 4. কোন সাল Leap Year কিনা তা কিভাবে বের করতে পারি?<br>
+      <br>
+      const isLearYear = (year) => {<br>
+        if((year % 400 === 0) || (year % 4 === 0 && year % 100 !== 0)){<br>
+          return `${year} is a Leap Year.`;<br>
+        }else{<br>
+          return `${year} is not a Leap Year.`;<br>
+        }<br>
+      }<br>
+      console.log(isLearYear(1972));<br>
+      //Solved<br>
+      <br>
+      // Problem 5. কোন Sentence এ কতগুলো Vowel তা কিভাবে দেখতে পারি?<br>
+      <br>
+      const vowels = ["A", "a", "E", "e", "I", "i", "O", "o", "U", "u"];<br>
+      <br>
+      const countVowel = (sentence) => {<br>
+        let count = 0;<br>
+        const letter = Array.from(sentence);<br>
+        letter.forEach((value) => {<br>
+          if(vowels.includes(value)){<br>
+            count++;<br>
+          }<br>
+        })<br>
+        return count;<br>
+      }<br>
+      console.log(countVowel("I love javascript"));<br>
+      //Solved<br>
+      <br>
+      // Problem 6.  কোন Array থেকে কিভাবে Duplicate বা Unique Number গুলো বের করে আনতে পারি?
+      <br>
+      const numbers = [3, 5, 2, 4, 6, 3, 6, 5, 4, 10, 2]<br>
+      <br>
+      const duplicateNum = numbers.filter((value, index, array) => {<br>
+        return array.indexOf(value) === index;<br>
+      })<br>
+      console.log(duplicateNum);<br>
+      //Solved<br>
+      
+      
+     </code>
+   </p>
+    <script src="./script.js"></script>
+  </body>
+</html>
